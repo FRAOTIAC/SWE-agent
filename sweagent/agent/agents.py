@@ -190,7 +190,7 @@ class AbstractAgent:
         replay_config: BaseModel | None
         logger: logging.Logger
 
-    @classmethod
+    @classmethod  # Turn instance method into class method(factory method)
     def from_config(cls, config: AgentConfig) -> Self: ...
 
     def add_hook(self, hook: AbstractAgentHook) -> None: ...
